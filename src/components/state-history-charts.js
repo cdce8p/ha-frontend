@@ -13,8 +13,6 @@ class StateHistoryCharts extends LocalizeMixin(PolymerElement) {
       <style>
         :host {
           display: block;
-          /* height of single timeline chart = 58px */
-          min-height: 58px;
         }
         .info {
           text-align: center;
@@ -29,16 +27,6 @@ class StateHistoryCharts extends LocalizeMixin(PolymerElement) {
       >
         <div class="info">
           [[localize('ui.components.history_charts.loading_history')]]
-        </div>
-      </template>
-
-      <template
-        is="dom-if"
-        class="info"
-        if="[[_computeIsEmpty(isLoadingData, historyData)]]"
-      >
-        <div class="info">
-          [[localize('ui.components.history_charts.no_history_found')]]
         </div>
       </template>
 
